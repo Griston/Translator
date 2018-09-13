@@ -1,0 +1,25 @@
+{
+  "name": "griston/translator",
+  "description": "Clever translator with translation",
+  "keywords": ["translator", "translation", "nette"],
+  "homepage": "https://github.com/griston/translator",
+  "license": ["BSD-3-Clause"],
+  "authors": [
+    {
+      "name": "David Skála",
+      "homepage": "https://www.griston.net"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "nette/nette": "^2.4"
+  },
+  "require-dev": {
+    "nette/tester": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "griston\\": "src"
+    }
+  }
+}
