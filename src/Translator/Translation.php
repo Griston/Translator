@@ -4,6 +4,10 @@ namespace Griston\Translator;
 
 use Nette\SmartObject;
 
+/**
+ * Class Translation
+ * @package Griston\Translator
+ */
 class Translation
 {
 
