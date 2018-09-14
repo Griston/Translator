@@ -10,4 +10,6 @@ Installation
 
 ```
 composer require griston/translator
+
+... IP
 ```
