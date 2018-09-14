@@ -1,6 +1,6 @@
 {
   "name": "griston/translator",
-  "description": "Simple trasnlator with doctrine2",
+  "description": "Simple translator with doctrine2",
   "keywords": ["translator", "translation", "nette"],
   "homepage": "https://github.com/griston/translator",
   "license": ["BSD-3-Clause"],
