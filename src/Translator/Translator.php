@@ -3,17 +3,19 @@
 namespace Griston\Translator;
 
 use App\Model\Translation\TranslationFacade;
-use Nette\Caching;
+use Nette\Caching\Cache;
+use Nette\Caching\IStorage;
 use Nette\Http\Session;
 use Nette\Localization\ITranslator;
 
 /**
- * Description of Translator
- *
+ * Class Translator
+ * @package Griston\Translator
  * @author David Skála <skala2524@gmail.com>
  */
 class Translator implements ITranslator
 {
+    use Nette\SmartObject;
 
     CONST TMP_LANG = [
         'cs' => 1
@@ -48,13 +50,13 @@ class Translator implements ITranslator
     /**
      * Translator constructor.
      * @param TranslationFacade $facadeTranslation
-     * @param Caching\IStorage $cacheStorage
+     * @param IStorage $cacheStorage
      * @param Session $session
      */
-    public function __construct(TranslationFacade $facadeTranslation, Caching\IStorage $cacheStorage, Session $session)
+    public function __construct(TranslationFacade $facadeTranslation, IStorage $cacheStorage, Session $session)
     {
         $this->facadeTranslation = $facadeTranslation;
-        $this->cache = new Caching\Cache($cacheStorage, sprintf('Translator.Translation'));
+        $this->cache = new Cache($cacheStorage, sprintf('Translator.Translation'));
         $this->session = $session;
     }
 

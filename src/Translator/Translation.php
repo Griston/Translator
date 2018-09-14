@@ -2,16 +2,19 @@
 
 namespace Griston\Translator;
 
-use Nette\SmartObject;
+use Nette\Localization\ITranslator;
+
 
 /**
  * Class Translation
  * @package Griston\Translator
+ * @author David Skála <skala2524@gmail.com>
  */
 class Translation
 {
+    use Nette\SmartObject;
 
-    /** @var \Nette\Localization\ITranslator */
+    /** @var ITranslator */
     private $translator;
 
     /** @var string */
@@ -22,11 +25,11 @@ class Translation
 
     /**
      * Translation constructor.
-     * @param \Nette\Localization\ITranslator $translator
+     * @param ITranslator $translator
      * @param $text
      * @param array $params
      */
-    function __construct(\Nette\Localization\ITranslator $translator, $text, array $params)
+    function __construct(ITranslator $translator, $text, array $params)
     {
         $this->translator = $translator;
         $this->text = $text;

@@ -12,7 +12,10 @@
   ],
   "require": {
     "php": ">=7.1",
-    "nette/nette": "^2.4"
+    "nette/nette": "^2.4",
+    "kdyby/doctrine": "^3.3",
+    "nettrine/migrations": "^0.3",
+    "contributte/console": "^0.5"
   },
   "require-dev": {
     "nette/tester": "@dev"
